@@ -1,0 +1,74 @@
+﻿<Window x:Class="Memoriajatek.wndKérdés"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kérdés" Height="350" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="imKép" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" />
+        <TextBlock x:Name="tkFellirat" Text="Mely helyeken volt látható ez a mesefigura?" 
+                   Grid.Row="0" Grid.Column="1" FontSize="14" FontWeight="Bold" Margin="5"/>
+        <GroupBox x:Name="gbElső"  Grid.Row="1" Grid.Column="1" Header="A kép első előfordulása">
+            <Grid x:Name="grElső">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="1. sor" Grid.Row="0" Grid.Column="0"/>
+                <Label Content="2. sor" Grid.Row="1" Grid.Column="0"/>
+                <RadioButton x:Name="rbElső00" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" IsChecked="True"/>
+                <RadioButton x:Name="rbElső01" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbElső02" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbElső03" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center"/>
+
+                <RadioButton x:Name="rbElső10" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" />
+                <RadioButton x:Name="rbElső11" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbElső12" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbElső13" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="gbMásodik"  Grid.Row="2" Grid.Column="1" Header="A kép második előfordulása">
+            <Grid x:Name="grMásodik">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="1. sor" Grid.Row="0" Grid.Column="0"/>
+                <Label Content="2. sor" Grid.Row="1" Grid.Column="0"/>
+                <RadioButton x:Name="rbMásodik00" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" IsChecked="True"/>
+                <RadioButton x:Name="rbMásodik01" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbMásodik02" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbMásodik03" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center"/>
+                
+                <RadioButton x:Name="rbMásodik10" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbMásodik11" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbMásodik12" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbMásodik13" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="btOK" Content="OK"
+                Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="30" Click="btOK_Click" />
+    </Grid>
+</Window>
